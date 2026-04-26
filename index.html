@@ -686,7 +686,7 @@ footer{
     <div class="h-btns">
       <button class="btn-gold" onclick="scrollTo('buchen')">✉ Jetzt anfragen</button>
       <button class="btn-outline" onclick="scrollTo('galerie')">📸 Galerie</button>
-      <button class="btn-outline" onclick="document.getElementById('alpa-panel').classList.add('open')">🎬 Video</button>
+      <button class="btn-outline" onclick="openVideo()">🎬 Video</button>
     </div>
   </div>
   <div id="drone-ctrl">
@@ -887,7 +887,7 @@ footer{
           Nebensaison ab <strong>CHF 2'800/Woche</strong> · Sommer/Winter ab <strong>CHF 4'200/Woche</strong><br>
           Weihnachten ab <strong>CHF 6'000/Woche</strong> · Silvester ab <strong>CHF 6'500/Woche</strong><br>
           <span style="font-size:.64rem;color:rgba(255,255,255,.28)">Endreinigung CHF 350 · Kaution CHF 500 · Kurtaxe CHF 3.80/P/Nacht</span><br>
-          <span style="color:rgba(100,200,100,.75);font-size:.7rem">✓ Bettwäsche & Handtücher inklusive · ✓ WLAN · ✓ Sauna</span>
+          <span style="color:rgba(100,200,100,.75);font-size:.7rem">✓ Bettwäsche & Handtücher inklusive · ✓ WLAN · ✓ Sauna</span><br><span style="color:rgba(100,200,100,.65);font-size:.68rem">✓ Elektrotaxi An-/Abreise gratis bei 7+ Nächten (CHF 40 Wert)</span>
         </div>
       </div>
       <div>
@@ -912,12 +912,24 @@ footer{
             <div><div class="co-lbl">Bergfex</div><div class="co-val" style="font-size:.82rem">bergfex.com · Lodge Monte Rosa</div></div>
           </a>
           <div class="rules-box">
-            <div style="font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:.6rem">Hausregeln</div>
-            <div class="rule-row"><span>✓</span><span>Check-in 16:00 · Check-out 10:00</span></div>
-            <div class="rule-row"><span>✓</span><span>Haustier max. 1 (+CHF 10/Tag)</span></div>
-            <div class="rule-row"><span>✗</span><span>Kein Rauchen im Haus</span></div>
-            <div class="rule-row"><span>✗</span><span>Keine Veranstaltungen</span></div>
-            <div class="rule-row"><span>👥</span><span>Max. 8 Gäste</span></div>
+            <div style="font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:.7rem">Preisübersicht</div>
+            <div style="display:grid;grid-template-columns:1fr auto;gap:.3rem .6rem;font-size:.74rem;">
+              <span style="color:rgba(255,255,255,.5)">Endreinigung</span><span style="color:rgba(255,255,255,.7);text-align:right;white-space:nowrap">CHF 350</span>
+              <span style="color:rgba(255,255,255,.5)">Kaution (rückzahlbar)</span><span style="color:rgba(255,255,255,.7);text-align:right;white-space:nowrap">CHF 500</span>
+              <span style="color:rgba(255,255,255,.5)">Extra-Gäste (7.–8. P.)</span><span style="color:rgba(255,255,255,.7);text-align:right;white-space:nowrap">CHF 70/P/Nacht</span>
+              <span style="color:rgba(255,255,255,.5)">Haustier</span><span style="color:rgba(255,255,255,.7);text-align:right;white-space:nowrap">CHF 10/Tag</span>
+              <span style="color:rgba(255,255,255,.5)">Kurtaxe (vor Ort)</span><span style="color:rgba(255,255,255,.7);text-align:right;white-space:nowrap">CHF 3.80/P/Nacht</span>
+              <span style="color:rgba(255,255,255,.35);font-size:.65rem"></span><span style="color:rgba(255,255,255,.35);font-size:.65rem;text-align:right">Kinder 6–15 J.: CHF 1.90</span>
+              <span style="color:rgba(255,255,255,.5)">E-Taxi Anreise/Abreise</span><span style="color:rgba(100,200,100,.8);text-align:right;white-space:nowrap;font-weight:700">GRATIS ✓</span>
+              <span style="color:rgba(255,255,255,.35);font-size:.65rem">bei mind. 7 Nächten</span><span style="color:rgba(255,255,255,.35);font-size:.65rem;text-align:right">(sonst CHF 40 retour)</span>
+            </div>
+            <div style="margin-top:.7rem;padding-top:.6rem;border-top:.5px solid rgba(255,255,255,.06)">
+              <div style="font-size:.56rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:.5rem">Hausregeln</div>
+              <div class="rule-row"><span>✓</span><span>Check-in 16:00 · Check-out 10:00</span></div>
+              <div class="rule-row"><span>✓</span><span>Haustier max. 1 (+CHF 10/Tag)</span></div>
+              <div class="rule-row"><span>✗</span><span>Kein Rauchen im Haus</span></div>
+              <div class="rule-row"><span>✗</span><span>Keine Veranstaltungen · Max. 8 Gäste</span></div>
+            </div>
           </div>
           <div class="storno">
             <div style="font-size:.54rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:.4rem">Stornierung</div>
@@ -940,8 +952,24 @@ footer{
       <div class="divider center"></div>
     </div>
     <div class="svc-grid reveal">
-      <div class="svc"><span class="svc-icon">🛒</span><div class="svc-name">Einkaufen</div><div class="svc-desc">Coop, Volg & Denner im Dorf. Heimlieferung ab CHF 100. Bäckerei Z'Pfünderli empfohlen. <a href="https://graechen.ch/de/Genuss-Kultur/Shopping" target="_blank">Shopping Grächen →</a></div></div>
-      <div class="svc"><span class="svc-icon">🚖</span><div class="svc-name">Anreise & Taxi</div><div class="svc-desc">Verkehrsfreie Zone. Parking Central Garage Nr. 2 (inklusive). Weitere CHF 8/Tag. <a href="https://graechen.ch/de/Info-Service/Anreise-Mobilitaet" target="_blank">Anreise →</a></div></div>
+      <div class="svc">
+  <span class="svc-icon">🛒</span>
+  <div class="svc-name">Einkauf & Heimlieferung</div>
+  <div class="svc-desc">
+    <span style="display:inline-block;background:rgba(201,168,76,.15);border:.5px solid rgba(201,168,76,.3);color:rgba(201,168,76,.9);font-size:.6rem;font-weight:700;padding:.15rem .45rem;margin-bottom:.4rem">💡 Tipp: Vor Anreise bestellen</span><br>
+    Coop/Volg/Denner: Heimlieferung ab CHF 100 direkt ins Chalet — so ist bei Anreise alles bereit. Bäckerei Z'Pfünderli empfohlen.
+    <a href="https://graechen.ch/de/Genuss-Kultur/Shopping" target="_blank">Shopping →</a>
+  </div>
+</div>
+      <div class="svc">
+  <span class="svc-icon">🚖</span>
+  <div class="svc-name">Elektrotaxi — Anreise/Abreise</div>
+  <div class="svc-desc">
+    <span style="display:inline-block;background:rgba(100,200,100,.15);border:.5px solid rgba(100,200,100,.35);color:rgba(100,200,100,.9);font-size:.6rem;font-weight:700;padding:.15rem .45rem;margin-bottom:.4rem">✓ GRATIS bei 7+ Nächten</span><br>
+    Verkehrsfreie Zone — kein Auto bis zur Lodge. Gepäcktransport per E-Taxi ab Central Garage (CHF 40 retour, bei 7+ Nächten inklusive). Bitte bei Buchungsbestätigung erwähnen.
+    <a href="https://graechen.ch/de/Info-Service/Anreise-Mobilitaet" target="_blank">Anreise Grächen →</a>
+  </div>
+</div>
       <div class="svc"><span class="svc-icon">⛷️</span><div class="svc-name">Ski & Bergbahnen</div><div class="svc-desc">Zwei Verleihe fussläufig. Skitickets online. <a href="https://graechen.ch/de/Aktivitaeten/Skifahren-und-Schlitteln/Skiverleih-Skidepot" target="_blank">Skiverleih →</a></div></div>
       <div class="svc"><span class="svc-icon">🍽️</span><div class="svc-name">Restaurants</div><div class="svc-desc">5 Restaurants fussläufig. Auf Wunsch reservieren wir für Sie. <a href="https://graechen.ch/de/Genuss-Kultur/Genuss-im-Tal/Restaurant-Guide" target="_blank">Restaurant-Guide →</a></div></div>
       <div class="svc"><span class="svc-icon">💊</span><div class="svc-name">Gesundheit</div><div class="svc-desc"><a href="https://www.medgraechen.ch/en/" target="_blank">Arzt Grächen</a> · <a href="https://apotheke-lagger.ch/" target="_blank">Apotheke Lagger</a> · <a href="https://www.valaishospital.ch/" target="_blank">Spital Visp</a> · <a href="https://www.air-zermatt.ch/de/rettung" target="_blank">Air Zermatt</a></div></div>
@@ -1319,6 +1347,7 @@ function calcP(){
   html+=`<div class="pc-total pc-row"><span>Total Direktbuchung</span><span>CHF ${total.toLocaleString('de-CH')}</span></div>`;
   if(save>0)html+=`<div class="pc-saving">💰 CHF ${save.toLocaleString('de-CH')} günstiger als Airbnb (dort ~CHF ${airbnb.toLocaleString('de-CH')})</div>`;
   html+=`<div style="margin-top:.5rem;font-size:.62rem;color:rgba(100,200,100,.65)">✓ Bettwäsche & Handtücher inklusive · ✓ Sauna inklusive</div>`;
+  if(nights>=7) html+=`<div style="font-size:.62rem;color:rgba(100,200,100,.65)">✓ Elektrotaxi Anreise & Abreise inklusive (CHF 40 Wert)</div>`;
   const r=document.getElementById('calc-res');
   r.innerHTML=html;r.classList.add('show');
 }
@@ -1329,7 +1358,7 @@ document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.re
 
 // ── ALPA CONCIERGE ──────────────────────────────
 const SYS=`Du bist ALPA, der persönliche Alpine Concierge der Lodge Monte Rosa in Graechen, Wallis. Antworte in der Sprache des Gastes (DE/EN/FR). Sei freundlich, hilfsbereit und kurz.
-Wichtige Infos: Check-in 16:00, Check-out 10:00. Code per E-Mail nach Buchung. Parking Central Garage Baergji 547, Nr.2. Sauna 2h/Tag inkl., schwarzer Knopf = Hauptschalter. Kamin: Holz links auf Terrasse. Kurtaxe CHF 3.80/P/Nacht. Kaution CHF 500. Endreinigung CHF 350. Haustier CHF 10/Tag. Extra-Gaeste ab 7. Person CHF 70/Nacht. Bettwaesche & Handtuecher inklusive. Kontakt: Caroline +41 79 323 06 74, hoefenmatt@outlook.com. Zermatt 45 Min., Saas-Fee 35 Min., Leukerbad 50 Min. Stornierung: 100% Rueckerstattung bis 30 Tage, danach keine.`;
+Wichtige Infos: Check-in 16:00, Check-out 10:00. Code per E-Mail nach Buchung. Parking Central Garage Baergji 547, Nr.2. Sauna 2h/Tag inkl., schwarzer Knopf = Hauptschalter. Kamin: Holz links auf Terrasse. Kurtaxe CHF 3.80/P/Nacht. Kaution CHF 500. Endreinigung CHF 350. Haustier CHF 10/Tag. Extra-Gaeste ab 7. Person CHF 70/Nacht. Bettwaesche & Handtuecher inklusive. Kontakt: Caroline +41 79 323 06 74, hoefenmatt@outlook.com. Zermatt 45 Min., Saas-Fee 35 Min., Leukerbad 50 Min. Stornierung: 100% Rueckerstattung bis 30 Tage, danach keine. E-Taxi: GRATIS bei 7+ Naechten (sonst CHF 40 retour). Einkauf-Lieferung: Coop/Volg/Denner liefert ab CHF 100 direkt ins Chalet - vor Anreise bestellen empfohlen!`;
 
 function toggleAlpa(){
   const p=document.getElementById('alpa-panel');
@@ -1361,6 +1390,34 @@ async function sendChat(){
   }
   msgs.scrollTop=msgs.scrollHeight;
 }
+
+function openVideo(){
+  const m=document.getElementById('video-modal');
+  const fr=document.getElementById('yt-frame');
+  fr.src=fr.dataset.src;
+  m.style.display='flex';
+  document.body.style.overflow='hidden';
+}
+function closeVideo(){
+  document.getElementById('yt-frame').src='';
+  document.getElementById('video-modal').style.display='none';
+  document.body.style.overflow='';
+}
 </script>
+
+<!-- VIDEO MODAL -->
+<div id="video-modal" onclick="if(event.target===this)closeVideo()" style="display:none;position:fixed;inset:0;z-index:3000;background:rgba(0,0,0,.95);align-items:center;justify-content:center;flex-direction:column;gap:.8rem;">
+  <button onclick="closeVideo()" style="position:fixed;top:1rem;right:1rem;background:none;border:none;color:rgba(255,255,255,.4);font-size:2rem;cursor:pointer;z-index:1">✕</button>
+  <div style="position:relative;width:min(900px,92vw);padding-bottom:min(56.25%,52vh);background:#000;">
+    <iframe id="yt-frame"
+      src=""
+      data-src="https://www.youtube.com/embed/BkT9OC6n4HM?autoplay=1&rel=0&modestbranding=1"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;"
+      allow="autoplay; fullscreen" allowfullscreen>
+    </iframe>
+  </div>
+  <div style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:rgba(255,255,255,.4)">Lodge Monte Rosa · Grächen Wallis · Drohnenfilm</div>
+</div>
+
 </body>
 </html>
