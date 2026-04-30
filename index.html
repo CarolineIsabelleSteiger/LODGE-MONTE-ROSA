@@ -588,8 +588,8 @@ footer{
 </head>
 <body>
 <!-- ══ LANDING ══════════════════════════════════ -->
-<div id="landing">
-  <img id="landing-bg" src="lodge-images/panorama-bw.jpeg" alt="Wallis Panorama">
+<div id="landing" style="background:url(panorama-bw.jpeg) center/cover no-repeat #000;">
+  <img id="landing-bg" src="panorama-bw.jpeg" alt="Wallis Panorama" onerror="this.src='view1.jpeg'">
   <div id="landing-vignette"></div>
   <div id="landing-logo">
     <svg width="36" height="36" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -685,7 +685,7 @@ footer{
       <span id="music-lbl">♪ Musik</span>
     </button>
     <audio id="bg-music" loop preload="none">
-      <!-- Add: <source src="lodge-images/alpine-chill.mp3" type="audio/mpeg"> -->
+      <!-- Add: <source src="alpine-chill.mp3" type="audio/mpeg"> -->
     </audio>
     <!-- Hero content -->
     <div class="hero-content" style="z-index:5;">
@@ -712,7 +712,7 @@ footer{
 
   <!-- ② PHOTO DRONE (after map flyover) -->
   <div id="photo-drone" style="position:absolute;inset:0;z-index:2;display:none;">
-    <img id="drone-img" src="lodge-images/IMG_2718.jpeg" alt="Lodge Monte Rosa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s ease;">
+    <img id="drone-img" src="IMG_2718.jpeg" alt="Lodge Monte Rosa" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity 1.2s ease;">
     <div class="hero-grad"></div>
     <div class="hframe tl"></div><div class="hframe tr"></div>
     <div class="hframe bl"></div><div class="hframe br"></div>
@@ -770,32 +770,32 @@ footer{
     <button class="gf-btn" onclick="gf('aussen',this)">Aussen · Terrassen</button>
   </div>
   <div class="gal-grid" id="gal-grid">
-    <div class="gi w2" data-cat="wohnen" onclick="lb(0)"><img src="lodge-images/int-wohnen.jpeg" alt="Wohnzimmer"><div class="gi-tag">Wohnzimmer ✨</div><div class="gi-label">Panorama-Kamin · Bergblick · Holzscheiben-Wand</div></div>
-    <div class="gi"    data-cat="wohnen" onclick="lb(1)"><img src="lodge-images/int-wohnen2.png" alt="Wohnen"><div class="gi-tag">Wohn-Ess-Küche</div><div class="gi-label">Offener Grundriss · Kronleuchter</div></div>
-    <div class="gi"    data-cat="wohnen" onclick="lb(2)"><img src="lodge-images/int-kueche.jpeg" alt="Küche"><div class="gi-tag">Küche</div><div class="gi-label">Inselblock · Holztisch · Miele</div></div>
-    <div class="gi"    data-cat="wohnen" onclick="lb(3)"><img src="lodge-images/int-tvwall.png" alt="TV-Wand"><div class="gi-tag">TV-Wand ✨</div><div class="gi-label">Screen in Holzscheiben-Wand</div></div>
-    <div class="gi w2" data-cat="wohnen" onclick="lb(4)"><img src="lodge-images/int-gang.png" alt="Korridor"><div class="gi-tag">Korridor ✨</div><div class="gi-label">Holzscheiben-Wand beleuchtet · Bodenlichter</div></div>
-    <div class="gi"    data-cat="wohnen" onclick="lb(5)"><img src="lodge-images/int-treppe.png" alt="Treppe"><div class="gi-tag">Holztreppe</div><div class="gi-label">Offene Stufen · Walliser Handwerk</div></div>
-    <div class="gi"    data-cat="schlafen" onclick="lb(6)"><img src="lodge-images/int-sz1.jpeg" alt="DZ 1"><div class="gi-tag">Doppelzimmer 1</div><div class="gi-label">Boxspring · Holzscheiben-Deko</div></div>
-    <div class="gi"    data-cat="schlafen" onclick="lb(7)"><img src="lodge-images/int-sz2.jpeg" alt="DZ 2"><div class="gi-tag">Doppelzimmer 2</div><div class="gi-label">Boxspring · Balkonzugang</div></div>
-    <div class="gi"    data-cat="schlafen" onclick="lb(8)"><img src="lodge-images/int-kinderzimmer.png" alt="Kinderzimmer"><div class="gi-tag">Kinderzimmer 👶</div><div class="gi-label">Stockbett 2×90×200 + Hochbett</div></div>
-    <div class="gi"    data-cat="schlafen" onclick="lb(10)"><img src="lodge-images/int-sz3.png" alt="DZ 3"><div class="gi-tag">Doppelzimmer 3</div><div class="gi-label">Boxspring · Balkon · Sommerblick</div></div>
-    <div class="gi w2" data-cat="schlafen" onclick="lb(10)"><img src="lodge-images/int-fenster-berg.png" alt="Bergblick"><div class="gi-tag">Ausblick aus dem Bett ✨</div><div class="gi-label">Walliser Viertausender direkt vom Kopfkissen</div></div>
-    <div class="gi w2" data-cat="wellness" onclick="lb(11)"><img src="lodge-images/int-wellness3.png" alt="Wellness"><div class="gi-tag">Wellness · Spa ✨</div><div class="gi-label">Badewanne · Buddha-Wandbild · Relaxliege</div></div>
-    <div class="gi"    data-cat="wellness" onclick="lb(12)"><img src="lodge-images/int-sauna.jpeg" alt="Sauna"><div class="gi-tag">Sauna ⭐</div><div class="gi-label">Finnische Holzsauna · Bergfenster</div></div>
-    <div class="gi"    data-cat="wellness" onclick="lb(13)"><img src="lodge-images/int-saunabereich.jpeg" alt="Saunabereich"><div class="gi-tag">Wellness-Bereich</div><div class="gi-label">Sauna + XXL-Dampfdusche</div></div>
-    <div class="gi"    data-cat="wellness" onclick="lb(14)"><img src="lodge-images/int-steinwaschbecken.png" alt="Steinbecken"><div class="gi-tag">Stein-Waschbecken</div><div class="gi-label">Doppel-Flusssteinschale auf Teak</div></div>
-    <div class="gi"    data-cat="wellness" onclick="lb(15)"><img src="lodge-images/int-dusche.jpeg" alt="Dusche"><div class="gi-tag">XXL-Regendusche</div><div class="gi-label">Glasfront · Naturstein</div></div>
-    <div class="gi"    data-cat="bad" onclick="lb(16)"><img src="lodge-images/int-bad3.png" alt="Bad"><div class="gi-tag">Bad</div><div class="gi-label">Glasdusche · Teak · Holzdecke</div></div>
-    <div class="gi"    data-cat="bad" onclick="lb(17)"><img src="lodge-images/int-wc.jpeg" alt="Gäste WC"><div class="gi-tag">Gäste-WC</div><div class="gi-label">Rundbogen-Fenster · Designer</div></div>
-    <div class="gi w2" data-cat="aussen" onclick="lb(18)"><img src="lodge-images/ext-terrasse-sommer.png" alt="Terrasse Sommer"><div class="gi-tag">Terrasse Sommer ✨</div><div class="sb-s">☀ Sommer</div><div class="gi-label">Liegestühle · Glasgeländer · Grächen Tal</div></div>
-    <div class="gi w2" data-cat="aussen" onclick="lb(19)"><img src="lodge-images/front-winter.jpeg" alt="Winter"><div class="gi-tag">Frontansicht Winter</div><div class="sb-w">❄ Winter</div><div class="gi-label">Schneebedecktes Chalet · Walliser Bergpanorama</div></div>
-    <div class="gi"    data-cat="aussen" onclick="lb(20)"><img src="lodge-images/IMG_2712.jpeg" alt="Terrasse OG"><div class="gi-tag">Terrasse OG</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Langer Holzbalkon</div></div>
-    <div class="gi"    data-cat="aussen" onclick="lb(21)"><img src="lodge-images/IMG_2718.jpeg" alt="Südseite"><div class="gi-tag">Südseite</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Panoramaverglasung · Terrassen</div></div>
-    <div class="gi"    data-cat="aussen" onclick="lb(22)"><img src="lodge-images/IMG_2749.jpeg" alt="Panorama"><div class="gi-tag">Bergpanorama</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Viertausender vom Balkon</div></div>
-    <div class="gi"    data-cat="aussen" onclick="lb(23)"><img src="lodge-images/IMG_2755.jpeg" alt="Sonne"><div class="gi-tag">Sonnenblick</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Gegenlicht · Alpengipfel</div></div>
-    <div class="gi w2" data-cat="aussen" onclick="lb(24)"><img src="lodge-images/view1.jpeg" alt="Panorama OG"><div class="gi-tag">Panorama Balkon OG ✨</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Monte Rosa + Dom · Glasbalkon</div></div>
-    <div class="gi"    data-cat="aussen" onclick="lb(25)"><img src="lodge-images/view2.jpeg" alt="Aussenansicht"><div class="gi-tag">Aussenansicht</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Holzfassade · Alpengipfel</div></div>
+    <div class="gi w2" data-cat="wohnen" onclick="lb(0)"><img src="int-wohnen.jpeg" alt="Wohnzimmer"><div class="gi-tag">Wohnzimmer ✨</div><div class="gi-label">Panorama-Kamin · Bergblick · Holzscheiben-Wand</div></div>
+    <div class="gi"    data-cat="wohnen" onclick="lb(1)"><img src="int-wohnen2.png" alt="Wohnen"><div class="gi-tag">Wohn-Ess-Küche</div><div class="gi-label">Offener Grundriss · Kronleuchter</div></div>
+    <div class="gi"    data-cat="wohnen" onclick="lb(2)"><img src="int-kueche.jpeg" alt="Küche"><div class="gi-tag">Küche</div><div class="gi-label">Inselblock · Holztisch · Miele</div></div>
+    <div class="gi"    data-cat="wohnen" onclick="lb(3)"><img src="int-tvwall.png" alt="TV-Wand"><div class="gi-tag">TV-Wand ✨</div><div class="gi-label">Screen in Holzscheiben-Wand</div></div>
+    <div class="gi w2" data-cat="wohnen" onclick="lb(4)"><img src="int-gang.png" alt="Korridor"><div class="gi-tag">Korridor ✨</div><div class="gi-label">Holzscheiben-Wand beleuchtet · Bodenlichter</div></div>
+    <div class="gi"    data-cat="wohnen" onclick="lb(5)"><img src="int-treppe.png" alt="Treppe"><div class="gi-tag">Holztreppe</div><div class="gi-label">Offene Stufen · Walliser Handwerk</div></div>
+    <div class="gi"    data-cat="schlafen" onclick="lb(6)"><img src="int-sz1.jpeg" alt="DZ 1"><div class="gi-tag">Doppelzimmer 1</div><div class="gi-label">Boxspring · Holzscheiben-Deko</div></div>
+    <div class="gi"    data-cat="schlafen" onclick="lb(7)"><img src="int-sz2.jpeg" alt="DZ 2"><div class="gi-tag">Doppelzimmer 2</div><div class="gi-label">Boxspring · Balkonzugang</div></div>
+    <div class="gi"    data-cat="schlafen" onclick="lb(8)"><img src="int-kinderzimmer.png" alt="Kinderzimmer"><div class="gi-tag">Kinderzimmer 👶</div><div class="gi-label">Stockbett 2×90×200 + Hochbett</div></div>
+    <div class="gi"    data-cat="schlafen" onclick="lb(10)"><img src="int-sz3.png" alt="DZ 3"><div class="gi-tag">Doppelzimmer 3</div><div class="gi-label">Boxspring · Balkon · Sommerblick</div></div>
+    <div class="gi w2" data-cat="schlafen" onclick="lb(10)"><img src="int-fenster-berg.png" alt="Bergblick"><div class="gi-tag">Ausblick aus dem Bett ✨</div><div class="gi-label">Walliser Viertausender direkt vom Kopfkissen</div></div>
+    <div class="gi w2" data-cat="wellness" onclick="lb(11)"><img src="int-wellness3.png" alt="Wellness"><div class="gi-tag">Wellness · Spa ✨</div><div class="gi-label">Badewanne · Buddha-Wandbild · Relaxliege</div></div>
+    <div class="gi"    data-cat="wellness" onclick="lb(12)"><img src="int-sauna.jpeg" alt="Sauna"><div class="gi-tag">Sauna ⭐</div><div class="gi-label">Finnische Holzsauna · Bergfenster</div></div>
+    <div class="gi"    data-cat="wellness" onclick="lb(13)"><img src="int-saunabereich.jpeg" alt="Saunabereich"><div class="gi-tag">Wellness-Bereich</div><div class="gi-label">Sauna + XXL-Dampfdusche</div></div>
+    <div class="gi"    data-cat="wellness" onclick="lb(14)"><img src="int-steinwaschbecken.png" alt="Steinbecken"><div class="gi-tag">Stein-Waschbecken</div><div class="gi-label">Doppel-Flusssteinschale auf Teak</div></div>
+    <div class="gi"    data-cat="wellness" onclick="lb(15)"><img src="int-dusche.jpeg" alt="Dusche"><div class="gi-tag">XXL-Regendusche</div><div class="gi-label">Glasfront · Naturstein</div></div>
+    <div class="gi"    data-cat="bad" onclick="lb(16)"><img src="int-bad3.png" alt="Bad"><div class="gi-tag">Bad</div><div class="gi-label">Glasdusche · Teak · Holzdecke</div></div>
+    <div class="gi"    data-cat="bad" onclick="lb(17)"><img src="int-wc.jpeg" alt="Gäste WC"><div class="gi-tag">Gäste-WC</div><div class="gi-label">Rundbogen-Fenster · Designer</div></div>
+    <div class="gi w2" data-cat="aussen" onclick="lb(18)"><img src="ext-terrasse-sommer.png" alt="Terrasse Sommer"><div class="gi-tag">Terrasse Sommer ✨</div><div class="sb-s">☀ Sommer</div><div class="gi-label">Liegestühle · Glasgeländer · Grächen Tal</div></div>
+    <div class="gi w2" data-cat="aussen" onclick="lb(19)"><img src="front-winter.jpeg" alt="Winter"><div class="gi-tag">Frontansicht Winter</div><div class="sb-w">❄ Winter</div><div class="gi-label">Schneebedecktes Chalet · Walliser Bergpanorama</div></div>
+    <div class="gi"    data-cat="aussen" onclick="lb(20)"><img src="IMG_2712.jpeg" alt="Terrasse OG"><div class="gi-tag">Terrasse OG</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Langer Holzbalkon</div></div>
+    <div class="gi"    data-cat="aussen" onclick="lb(21)"><img src="IMG_2718.jpeg" alt="Südseite"><div class="gi-tag">Südseite</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Panoramaverglasung · Terrassen</div></div>
+    <div class="gi"    data-cat="aussen" onclick="lb(22)"><img src="IMG_2749.jpeg" alt="Panorama"><div class="gi-tag">Bergpanorama</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Viertausender vom Balkon</div></div>
+    <div class="gi"    data-cat="aussen" onclick="lb(23)"><img src="IMG_2755.jpeg" alt="Sonne"><div class="gi-tag">Sonnenblick</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Gegenlicht · Alpengipfel</div></div>
+    <div class="gi w2" data-cat="aussen" onclick="lb(24)"><img src="view1.jpeg" alt="Panorama OG"><div class="gi-tag">Panorama Balkon OG ✨</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Monte Rosa + Dom · Glasbalkon</div></div>
+    <div class="gi"    data-cat="aussen" onclick="lb(25)"><img src="view2.jpeg" alt="Aussenansicht"><div class="gi-tag">Aussenansicht</div><div class="sb-a">🍂 Herbst</div><div class="gi-label">Holzfassade · Alpengipfel</div></div>
   </div>
 
   <!-- Reviews -->
@@ -1146,32 +1146,32 @@ footer{
 <script>
 // ── PHOTOS for lightbox ─────────────────────────
 const PHOTOS = [
-  {s:'lodge-images/int-wohnen.jpeg',c:'Wohnzimmer · Panorama-Kamin · Bergblick'},
-  {s:'lodge-images/int-wohnen2.png',c:'Wohn-Ess-Küche · Kronleuchter'},
-  {s:'lodge-images/int-kueche.jpeg',c:'Küche & Essen · Inselblock · Miele'},
-  {s:'lodge-images/int-tvwall.png',c:'TV-Wand in Holzscheiben-Wand'},
-  {s:'lodge-images/int-gang.png',c:'Korridor · Holzscheiben-Wand beleuchtet'},
-  {s:'lodge-images/int-treppe.png',c:'Holztreppe · Offene Stufen'},
-  {s:'lodge-images/int-sz1.jpeg',c:'Doppelzimmer 1 · Boxspring · Bergfenster'},
-  {s:'lodge-images/int-sz2.jpeg',c:'Doppelzimmer 2 · Balkonzugang'},
-  {s:'lodge-images/int-kinderzimmer.png',c:'Kinderzimmer · Stockbett 2x90x200 + Hochbett'},
-  {s:'lodge-images/int-sz3.png',c:'Doppelzimmer 3 · Boxspring · Balkon · Sommerblick'},
-  {s:'lodge-images/int-fenster-berg.png',c:'Ausblick aus dem Bett · Walliser Viertausender'},
-  {s:'lodge-images/int-wellness3.png',c:'Wellness · Badewanne · Buddha-Wandbild'},
-  {s:'lodge-images/int-sauna.jpeg',c:'Sauna · Finnische Holzsauna · Bergfenster'},
-  {s:'lodge-images/int-saunabereich.jpeg',c:'Wellness-Bereich · Sauna + Dampfdusche'},
-  {s:'lodge-images/int-steinwaschbecken.png',c:'Naturstein-Waschbecken · Teak'},
-  {s:'lodge-images/int-dusche.jpeg',c:'XXL-Regendusche · Glasfront'},
-  {s:'lodge-images/int-bad3.png',c:'Bad · Glasdusche · Teak'},
-  {s:'lodge-images/int-wc.jpeg',c:'Gaeste-WC · Rundbogen-Fenster'},
-  {s:'lodge-images/ext-terrasse-sommer.png',c:'Terrasse Sommer · Grächen Tal'},
-  {s:'lodge-images/front-winter.jpeg',c:'Frontansicht Winter · Bergpanorama'},
-  {s:'lodge-images/IMG_2712.jpeg',c:'Terrasse OG · Holzbalkon · Herbst'},
-  {s:'lodge-images/IMG_2718.jpeg',c:'Südseite · Panoramaverglasung'},
-  {s:'lodge-images/IMG_2749.jpeg',c:'Bergpanorama · Viertausender'},
-  {s:'lodge-images/IMG_2755.jpeg',c:'Sonnenblick · Alpengipfel'},
-  {s:'lodge-images/view1.jpeg',c:'Panorama Balkon OG · Monte Rosa + Dom'},
-  {s:'lodge-images/view2.jpeg',c:'Aussenansicht · Holzfassade'},
+  {s:'int-wohnen.jpeg',c:'Wohnzimmer · Panorama-Kamin · Bergblick'},
+  {s:'int-wohnen2.png',c:'Wohn-Ess-Küche · Kronleuchter'},
+  {s:'int-kueche.jpeg',c:'Küche & Essen · Inselblock · Miele'},
+  {s:'int-tvwall.png',c:'TV-Wand in Holzscheiben-Wand'},
+  {s:'int-gang.png',c:'Korridor · Holzscheiben-Wand beleuchtet'},
+  {s:'int-treppe.png',c:'Holztreppe · Offene Stufen'},
+  {s:'int-sz1.jpeg',c:'Doppelzimmer 1 · Boxspring · Bergfenster'},
+  {s:'int-sz2.jpeg',c:'Doppelzimmer 2 · Balkonzugang'},
+  {s:'int-kinderzimmer.png',c:'Kinderzimmer · Stockbett 2x90x200 + Hochbett'},
+  {s:'int-sz3.png',c:'Doppelzimmer 3 · Boxspring · Balkon · Sommerblick'},
+  {s:'int-fenster-berg.png',c:'Ausblick aus dem Bett · Walliser Viertausender'},
+  {s:'int-wellness3.png',c:'Wellness · Badewanne · Buddha-Wandbild'},
+  {s:'int-sauna.jpeg',c:'Sauna · Finnische Holzsauna · Bergfenster'},
+  {s:'int-saunabereich.jpeg',c:'Wellness-Bereich · Sauna + Dampfdusche'},
+  {s:'int-steinwaschbecken.png',c:'Naturstein-Waschbecken · Teak'},
+  {s:'int-dusche.jpeg',c:'XXL-Regendusche · Glasfront'},
+  {s:'int-bad3.png',c:'Bad · Glasdusche · Teak'},
+  {s:'int-wc.jpeg',c:'Gaeste-WC · Rundbogen-Fenster'},
+  {s:'ext-terrasse-sommer.png',c:'Terrasse Sommer · Grächen Tal'},
+  {s:'front-winter.jpeg',c:'Frontansicht Winter · Bergpanorama'},
+  {s:'IMG_2712.jpeg',c:'Terrasse OG · Holzbalkon · Herbst'},
+  {s:'IMG_2718.jpeg',c:'Südseite · Panoramaverglasung'},
+  {s:'IMG_2749.jpeg',c:'Bergpanorama · Viertausender'},
+  {s:'IMG_2755.jpeg',c:'Sonnenblick · Alpengipfel'},
+  {s:'view1.jpeg',c:'Panorama Balkon OG · Monte Rosa + Dom'},
+  {s:'view2.jpeg',c:'Aussenansicht · Holzfassade'},
 ];
 let lbI = 0;
 function lb(i){
@@ -1434,14 +1434,14 @@ document.addEventListener('click', () => {
 //  PHOTO DRONE TOUR
 // ══════════════════════════════════════════════════════
 const SHOTS=[
-  {src:'lodge-images/view2.jpeg',     side:'Anflug',     alt:'180 m',dir:0},
-  {src:'lodge-images/front-winter.jpeg',side:'Nordseite',alt:'50 m', dir:0},
-  {src:'lodge-images/IMG_2715.jpeg',  side:'Ostseite',   alt:'50 m', dir:90},
-  {src:'lodge-images/IMG_2712.jpeg',  side:'Süd OG',     alt:'45 m', dir:180},
-  {src:'lodge-images/IMG_2718.jpeg',  side:'Süd EG',     alt:'40 m', dir:180},
-  {src:'lodge-images/ext-terrasse-sommer.png',side:'Südwest',alt:'45 m',dir:225},
-  {src:'lodge-images/IMG_2749.jpeg',  side:'Panorama',   alt:'55 m', dir:270},
-  {src:'lodge-images/view1.jpeg',     side:'Finale',     alt:'60 m', dir:315},
+  {src:'view2.jpeg',     side:'Anflug',     alt:'180 m',dir:0},
+  {src:'front-winter.jpeg',side:'Nordseite',alt:'50 m', dir:0},
+  {src:'IMG_2715.jpeg',  side:'Ostseite',   alt:'50 m', dir:90},
+  {src:'IMG_2712.jpeg',  side:'Süd OG',     alt:'45 m', dir:180},
+  {src:'IMG_2718.jpeg',  side:'Süd EG',     alt:'40 m', dir:180},
+  {src:'ext-terrasse-sommer.png',side:'Südwest',alt:'45 m',dir:225},
+  {src:'IMG_2749.jpeg',  side:'Panorama',   alt:'55 m', dir:270},
+  {src:'view1.jpeg',     side:'Finale',     alt:'60 m', dir:315},
 ];
 let di=0, dPlay=false, dTimer=null;
 
@@ -1542,7 +1542,7 @@ function setSeason(s){
   document.querySelectorAll('.season-btn').forEach(b=>b.classList.remove('active'));
   const b=document.getElementById('sb-'+s);
   if(b)b.classList.add('active');
-  const imgs={winter:'lodge-images/front-winter.jpeg',sommer:'lodge-images/ext-terrasse-sommer.png',herbst:'lodge-images/view1.jpeg'};
+  const imgs={winter:'front-winter.jpeg',sommer:'ext-terrasse-sommer.png',herbst:'view1.jpeg'};
   if(imgs[s]&&document.getElementById('drone-img')){document.getElementById('drone-img').src=imgs[s];}
 }
 // Auto-detect
